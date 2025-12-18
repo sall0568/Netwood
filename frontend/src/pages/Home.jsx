@@ -28,6 +28,7 @@ const Home = () => {
     if (isAuthenticated) {
       fetchRecommendations();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, language]); // Re-fetch when language changes
 
   const fetchTrendingMovies = async () => {

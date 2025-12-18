@@ -17,6 +17,7 @@ const Category = () => {
     if (genre) {
       fetchMoviesByCategory();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genre]);
 
   const fetchMoviesByCategory = async () => {

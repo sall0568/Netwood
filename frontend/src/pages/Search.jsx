@@ -18,6 +18,7 @@ const Search = () => {
     if (query) {
       searchMovies();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
   const searchMovies = async () => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Clock, Trash2, Film } from "lucide-react";
+import { Clock, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 import VideoPlayer from "../components/VideoPlayer";
@@ -20,6 +20,7 @@ const History = () => {
       return;
     }
     fetchHistory();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
   const fetchHistory = async () => {

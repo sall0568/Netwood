@@ -14,6 +14,7 @@ const FavoriteButton = ({ contentId, size = 24 }) => {
     if (isAuthenticated && contentId) {
       checkIfFavorite();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contentId, isAuthenticated]);
 
   const checkIfFavorite = async () => {

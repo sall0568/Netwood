@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Download, Trash2, Film } from "lucide-react";
+import { Download, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 import VideoPlayer from "../components/VideoPlayer";
@@ -17,6 +17,7 @@ const Downloads = () => {
       return;
     }
     loadDownloads();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
   const loadDownloads = () => {

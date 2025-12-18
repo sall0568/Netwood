@@ -15,6 +15,7 @@ const RatingStars = ({ contentId, size = 20, showLabel = true }) => {
     if (isAuthenticated && contentId) {
       fetchRating();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contentId, isAuthenticated]);
 
   const fetchRating = async () => {

@@ -10,8 +10,6 @@ import {
   Eye,
   Star,
   ArrowLeft,
-  Share2,
-  Heart,
 } from "lucide-react";
 import MovieCard from "../components/MovieCard";
 import AdBanner from "../components/AdBanner";
@@ -36,6 +34,7 @@ const Movie = () => {
 
   useEffect(() => {
     fetchMovie();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   useEffect(() => {
