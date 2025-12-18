@@ -1,0 +1,71 @@
+{
+    "nav": {
+      "trending": "Tendances",
+      "categories": "Catégories",
+      "search": "Rechercher un film...",
+      "login": "Connexion",
+      "register": "Inscription",
+      "profile": "Mon profil",
+      "favorites": "Mes favoris",
+      "history": "Historique",
+      "logout": "Déconnexion"
+    },
+    "home": {
+      "recommended": "Recommandé pour vous",
+      "recommendedDesc": "Basé sur votre historique et vos préférences",
+      "trending": "Films Tendances",
+      "trendingDesc": "Découvrez les meilleurs films de Nollywood",
+      "noMovies": "Aucun film trouvé",
+      "noMoviesDesc": "Revenez plus tard pour découvrir du contenu"
+    },
+    "favorites": {
+      "title": "Mes Favoris",
+      "empty": "Aucun favori pour le moment",
+      "emptyDesc": "Ajoutez des films à vos favoris pour les retrouver facilement",
+      "discover": "Découvrir des films"
+    },
+    "history": {
+      "title": "Mon Historique",
+      "clearAll": "Tout effacer",
+      "empty": "Aucun historique pour le moment",
+      "emptyDesc": "Les films que vous regardez apparaîtront ici",
+      "confirmClear": "Êtes-vous sûr de vouloir effacer tout votre historique ?"
+    },
+    "auth": {
+      "loginTitle": "Connectez-vous à votre compte",
+      "registerTitle": "Créez votre compte",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "username": "Nom d'utilisateur",
+      "loginButton": "Se connecter",
+      "registerButton": "S'inscrire",
+      "noAccount": "Pas encore de compte ?",
+      "hasAccount": "Vous avez déjà un compte ?",
+      "backHome": "Retour à l'accueil"
+    },
+    "video": {
+      "close": "Fermer",
+      "description": "Description",
+      "cast": "Distribution",
+      "director": "Réalisateur",
+      "production": "Production",
+      "channel": "Chaîne",
+      "yourRating": "Votre note",
+      "views": "vues"
+    },
+    "common": {
+      "loading": "Chargement...",
+      "movie": "Film",
+      "tvshow": "Série",
+      "genre": "Genre",
+      "language": "Langue",
+      "year": "Année",
+      "results": "résultat(s)",
+      "searching": "Recherche en cours..."
+    },
+    "footer": {
+      "copyright": "© 2024 NetWood - Plateforme de streaming de films nigérians",
+      "powered": "Propulsé par l'API YouTube"
+    }
+  }

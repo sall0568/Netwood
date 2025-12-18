@@ -1,0 +1,71 @@
+{
+    "nav": {
+      "trending": "Trending",
+      "categories": "Categories",
+      "search": "Search for a movie...",
+      "login": "Login",
+      "register": "Sign Up",
+      "profile": "My Profile",
+      "favorites": "My Favorites",
+      "history": "History",
+      "logout": "Logout"
+    },
+    "home": {
+      "recommended": "Recommended for you",
+      "recommendedDesc": "Based on your history and preferences",
+      "trending": "Trending Movies",
+      "trendingDesc": "Discover the best Nollywood movies",
+      "noMovies": "No movies found",
+      "noMoviesDesc": "Come back later to discover content"
+    },
+    "favorites": {
+      "title": "My Favorites",
+      "empty": "No favorites yet",
+      "emptyDesc": "Add movies to your favorites to find them easily",
+      "discover": "Discover movies"
+    },
+    "history": {
+      "title": "My History",
+      "clearAll": "Clear All",
+      "empty": "No history yet",
+      "emptyDesc": "Movies you watch will appear here",
+      "confirmClear": "Are you sure you want to clear all your history?"
+    },
+    "auth": {
+      "loginTitle": "Login to your account",
+      "registerTitle": "Create your account",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "username": "Username",
+      "loginButton": "Login",
+      "registerButton": "Sign Up",
+      "noAccount": "Don't have an account?",
+      "hasAccount": "Already have an account?",
+      "backHome": "Back to home"
+    },
+    "video": {
+      "close": "Close",
+      "description": "Description",
+      "cast": "Cast",
+      "director": "Director",
+      "production": "Production",
+      "channel": "Channel",
+      "yourRating": "Your Rating",
+      "views": "views"
+    },
+    "common": {
+      "loading": "Loading...",
+      "movie": "Movie",
+      "tvshow": "TV Show",
+      "genre": "Genre",
+      "language": "Language",
+      "year": "Year",
+      "results": "result(s)",
+      "searching": "Searching..."
+    },
+    "footer": {
+      "copyright": "© 2024 NetWood - Nigerian Movies Streaming Platform",
+      "powered": "Powered by YouTube API"
+    }
+  }

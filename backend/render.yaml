@@ -1,0 +1,32 @@
+services:
+  # Backend API
+  - type: web
+    name: netwood-api
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRE
+        value: 30d
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX
+        value: 10000
+
+databases:
+  # MongoDB (optionnel si vous utilisez MongoDB Atlas)
+  - name: netwood-db
+    plan: free
