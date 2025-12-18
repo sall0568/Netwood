@@ -47,8 +47,19 @@ const app = express();
 app.use(helmet());
 
 // Enable CORS
-// Enable CORS (configured below)
-// app.use(cors());
+const corsOptions = {
+  origin:
+    process.env.NODE_ENV === "production"
+      ? [process.env.CLIENT_URL, "https://netwood-frontend.netlify.app"]
+      : [
+          "http://localhost:3000",
+          "http://localhost:3001",
+          "http://localhost:3002",
+        ],
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 // Parse JSON request body
 app.use(express.json());
@@ -191,18 +202,7 @@ const checkAndSeedDatabase = async () => {
   }
 };
 
-// Remplacer la configuration CORS dans server.js
-
-// Enable CORS
-const corsOptions = {
-  origin:
-    process.env.NODE_ENV === "production"
-      ? [process.env.CLIENT_URL, "https://netwood-frontend.vercel.app"]
-      : "*",
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+// CORS is configured at the top of the file
 
 // Start server
 const PORT = process.env.PORT || 3000;
