@@ -3,7 +3,7 @@
 [build]
   base = "frontend"
   publish = "build"
-  command = "npm run build"
+  command = "REACT_APP_API_URL=https://netwood-tzf7.onrender.com/api npm run build"
 
 [build.environment]
   CI = "false"
