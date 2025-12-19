@@ -1,5 +1,5 @@
-const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "http://localhost:3000/api";
+const API_BASE_URL = "https://netwood-tzf7.onrender.com/api";
+// const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:3000/api";
 
 export const api = {
   // Récupérer les films tendances
