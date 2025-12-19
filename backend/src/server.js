@@ -50,7 +50,7 @@ app.use(helmet());
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? [process.env.CLIENT_URL, "https://netwood-frontend.netlify.app"]
+      ? [process.env.CLIENT_URL, "https://netwood.netlify.app"]
       : [
           "http://localhost:3000",
           "http://localhost:3001",
