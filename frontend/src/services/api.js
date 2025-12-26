@@ -119,6 +119,22 @@ export const api = {
 
   // === FAVORIS ===
 
+  // Récupérer tous les favoris
+  getFavorites: async (token, limit = 50) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/favorites?limit=${limit}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await response.json();
+      return data.success ? data.data : [];
+    } catch (error) {
+      console.error("Error fetching favorites:", error);
+      return [];
+    }
+  },
+
   // Ajouter aux favoris
   addToFavorites: async (token, contentId) => {
     try {
