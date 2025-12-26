@@ -125,4 +125,54 @@ router.post("/seed/genres", async (req, res) => {
   }
 });
 
+/**
+ * @route   POST /api/content/seed/french
+ * @desc    Seed the database with French Nigerian movies
+ * @access  Public
+ */
+router.post("/seed/french", async (req, res) => {
+  try {
+    const frenchQueries = [
+      "Film nigérian en français",
+      "Nollywood film français complet",
+      "Film africain nigérian français",
+      "Nollywood doublé français",
+      "Film nigérian 2024 français",
+    ];
+
+    logger.info("French content seeding requested");
+
+    let totalSaved = 0;
+    const results = [];
+
+    for (const query of frenchQueries) {
+      try {
+        const savedContent = await fetchAndSaveContent(query, 15);
+        totalSaved += savedContent.length;
+        results.push({ query, count: savedContent.length });
+        logger.info(`Seeded ${savedContent.length} items for query: ${query}`);
+
+        // Wait a bit between requests to avoid API rate limits
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      } catch (error) {
+        logger.error(`Error seeding query "${query}": ${error.message}`);
+        results.push({ query, count: 0, error: error.message });
+      }
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: `Successfully seeded database with ${totalSaved} French items`,
+      totalCount: totalSaved,
+      results,
+    });
+  } catch (error) {
+    logger.error(`Error in French seeding: ${error.message}`);
+    return res.status(500).json({
+      success: false,
+      error: "Server Error",
+    });
+  }
+});
+
 module.exports = router;
