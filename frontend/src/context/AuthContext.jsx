@@ -1,5 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
+const API_BASE_URL = "https://netwood-tzf7.onrender.com/api";
+
 const AuthContext = createContext();
 
 export const useAuth = () => {
@@ -30,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   // Fonction de connexion
   const login = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +59,7 @@ export const AuthProvider = ({ children }) => {
   // Fonction d'inscription
   const register = async (username, email, password) => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/register", {
+      const response = await fetch(`${API_BASE_URL}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +94,7 @@ export const AuthProvider = ({ children }) => {
   // Fonction de mise à jour du profil
   const updateProfile = async (updates) => {
     try {
-      const response = await fetch("http://localhost:3000/api/auth/update", {
+      const response = await fetch(`${API_BASE_URL}/auth/update`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -120,7 +122,7 @@ export const AuthProvider = ({ children }) => {
   const updatePreferences = async (preferences) => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/auth/preferences",
+        `${API_BASE_URL}/auth/preferences`,
         {
           method: "PUT",
           headers: {
