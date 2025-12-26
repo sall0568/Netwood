@@ -119,6 +119,11 @@ const checkAndSeedDatabase = async () => {
         "Nigerian movies 2023",
         "Nollywood latest movies",
         "Nigerian TV shows",
+        // French content
+        "Film nigérian en français",
+        "Nollywood film français complet",
+        "Film africain nigérian français",
+        "Nollywood doublé français",
       ];
 
       for (const query of initialQueries) {
