@@ -5,7 +5,7 @@ import MovieCard from "../components/MovieCard";
 import VideoPlayer from "../components/VideoPlayer";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { api } from "../services/api";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../context/LanguageContext";
 
 // Map UI language to content language
 const languageMap = {
