@@ -378,11 +378,17 @@ const getContentByCategory = async (
   categoryType,
   categoryValue,
   limit = 20,
-  skip = 0
+  skip = 0,
+  language = null
 ) => {
   try {
     // Build search criteria based on category type
     const searchCriteria = {};
+
+    // Add language filter if specified
+    if (language) {
+      searchCriteria.language = language;
+    }
 
     switch (categoryType) {
       case "contentType":

@@ -94,6 +94,7 @@ const getByCategory = async (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const skip = (page - 1) * limit;
     const minResults = 12; // Minimum number of results to return
+    const language = req.query.language || null; // Optional language filter
 
     // Validate category type
     const validCategoryTypes = [
@@ -118,12 +119,13 @@ const getByCategory = async (req, res) => {
       });
     }
 
-    // Get content by category from database
+    // Get content by category from database (now with optional language filter)
     const categoryResult = await getContentByCategory(
       categoryType,
       categoryValue,
       limit,
-      skip
+      skip,
+      language
     );
 
     let { results, totalCount, totalPages } = categoryResult;

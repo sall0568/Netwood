@@ -5,9 +5,20 @@ import MovieCard from "../components/MovieCard";
 import VideoPlayer from "../components/VideoPlayer";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { api } from "../services/api";
+import { useLanguage } from "../contexts/LanguageContext";
+
+// Map UI language to content language
+const languageMap = {
+  fr: "French",
+  en: "English",
+};
 
 const Category = () => {
   const { genre } = useParams();
+  const { language } = useLanguage();
+
+  // Get content language from UI language
+  const contentLanguage = languageMap[language] || "English";
 
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -18,11 +29,11 @@ const Category = () => {
       fetchMoviesByCategory();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [genre]);
+  }, [genre, language]);
 
   const fetchMoviesByCategory = async () => {
     setLoading(true);
-    const data = await api.getMoviesByCategory("genre", genre, 20);
+    const data = await api.getMoviesByCategory("genre", genre, 20, contentLanguage);
     setMovies(data);
     setLoading(false);
   };

@@ -78,11 +78,18 @@ export const api = {
   },
 
   // Récupérer les films par catégorie
-  getMoviesByCategory: async (categoryType, categoryValue, limit = 20) => {
+  getMoviesByCategory: async (
+    categoryType,
+    categoryValue,
+    limit = 20,
+    language = null
+  ) => {
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/content/category/${categoryType}/${categoryValue}?limit=${limit}`
-      );
+      let url = `${API_BASE_URL}/content/category/${categoryType}/${categoryValue}?limit=${limit}`;
+      if (language) {
+        url += `&language=${encodeURIComponent(language)}`;
+      }
+      const response = await fetch(url);
       const data = await response.json();
       return data.success ? data.data : [];
     } catch (error) {
